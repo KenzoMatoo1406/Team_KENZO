@@ -11,3 +11,5 @@ Regina :)
 
 
 HOLA SOY PRUEBA DE INTEGRANTE DE RO HACIENDO CAMBIOS BIEN BELIKOS
+
+222 Hola, soy la segunda prueba, testeando el RULESET

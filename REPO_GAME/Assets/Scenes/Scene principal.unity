@@ -1372,37 +1372,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &517725306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 517725307}
-  m_Layer: 0
-  m_Name: EstructuraCuartoRegina
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &517725307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517725306}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.73142, y: 0, z: 28.64058}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526459642
 GameObject:
   m_ObjectHideFlags: 0
@@ -7762,7 +7731,7 @@ PrefabInstance:
       objectReference: {fileID: 952749806}
     - target: {fileID: 4874870533735904643, guid: c8c36f3b52fd42549ada7c714921352f, type: 3}
       propertyPath: m_VersionIndex
-      value: 1597
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 6126523743039156470, guid: c8c36f3b52fd42549ada7c714921352f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7822,4 +7791,3 @@ SceneRoots:
   - {fileID: 198311080}
   - {fileID: 1432751935}
   - {fileID: 706333572}
-  - {fileID: 517725307}

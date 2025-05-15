@@ -65,9 +65,23 @@ Shader "Custom/UV_Reveal_Shader"
             half4 frag(Varyings IN) : SV_Target
             {
                 float3 lightDir = normalize(_LightPos.xyz - IN.worldPos);
-                float scale = dot(lightDir, normalize(_LightDir.xyz));
-                float threshold = cos(radians(_LightAngle));
-                float strength = saturate((scale - threshold) * _StrengthScale);
+                // Convert angles from degrees to radians
+                float outerAngleRad = radians(_LightAngle * 0.5); // spotAngle is full cone, we need half-angle
+                float innerAngleRad = outerAngleRad * 0.8;        // 80% of outer for smoother falloff
+
+                float3 L = normalize(_LightPos.xyz - IN.worldPos);
+                float3 D = normalize(_LightDir.xyz);
+
+                // Compute the angle between light direction and point
+                float cosTheta = dot(L, D);
+
+                // Thresholds
+                float outerCos = cos(outerAngleRad);
+                float innerCos = cos(innerAngleRad);
+
+                // Smooth step between inner and outer angle
+                float strength = saturate((cosTheta - outerCos) / (innerCos - outerCos));
+
 
                 float4 baseColor = tex2D(_MainTex, IN.uv) * _MyColor;
                 float3 finalColor = baseColor.rgb * strength;
